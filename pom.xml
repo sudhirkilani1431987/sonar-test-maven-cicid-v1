@@ -62,9 +62,13 @@
 				<version>2.2.1</version>
 				<configuration>
 					<deploymentType>cloudhub</deploymentType>
+					<muleVersion>3.8.5</muleVersion>
 					<!-- Set these properties in your Maven settings.xml file -->
 					<username>sudhirkilanimule</username>
 					<password>Mulesoft@12345</password>
+					<target>CloudHub</target>
+					<targetType>server</targetType>
+					<environment>Sandbox</environment>
 					<workerType>Micro</workerType>
 				</configuration>
 				<executions>
@@ -76,6 +80,13 @@
 						</goals>
 					</execution>
 				</executions>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-deploy-plugin</artifactId>
+				<configuration>
+					<skip>true</skip>
+				</configuration>
 			</plugin>
 		</plugins>
 	</build>
