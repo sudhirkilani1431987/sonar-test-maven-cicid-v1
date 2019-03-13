@@ -64,7 +64,7 @@
 					<deploymentType>cloudhub</deploymentType>
 					<muleVersion>3.8.5</muleVersion>
 					<!-- Set these properties in your Maven settings.xml file -->
-					<username>sudhirkilanimule</username>
+					<username>sudhirkilanimule1</username>
 					<password>Mulesoft@12345</password>
 					<target>CloudHub</target>
 					<targetType>server</targetType>
