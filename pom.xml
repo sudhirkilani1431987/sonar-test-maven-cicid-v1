@@ -14,9 +14,9 @@
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
 		<mule.version>3.8.5</mule.version>
-    	<mule.tools.version>1.2</mule.tools.version>
-    	<sonar.sources>.</sonar.sources>
-    	<sonar.inclusions>src/main/app/**</sonar.inclusions>
+    	<mule.tools.version>1.7</mule.tools.version>
+    	<!--  <sonar.sources>.</sonar.sources>
+    	<sonar.inclusions>src/main/app/**</sonar.inclusions>-->
     		</properties>
 
 	<build>
@@ -127,13 +127,13 @@
 			<version>${mule.version}</version>
 			<scope>test</scope>
 		</dependency>
-		<dependency>
+		<!--<dependency>
 			<groupId>org.sonarsource.scanner.maven</groupId>
 			<artifactId>sonar-maven-plugin</artifactId>
 			<version>3.2</version>
-		</dependency>
+		</dependency>-->
 			</dependencies>
-	<profiles>
+	<!--  <profiles>
 		<profile>
 		<id>sonar</id>
 		<activation>
@@ -147,7 +147,7 @@
 			</sonar.host.url>
 		</properties>
 		</profile>
-	</profiles>
+	</profiles>-->
 	
 
 	<repositories>
