@@ -15,7 +15,9 @@
 
 		<mule.version>3.8.5</mule.version>
     	<mule.tools.version>1.2</mule.tools.version>
-	</properties>
+    	<sonar.sources>.</sonar.sources>
+    	<sonar.inclusions>src/main/app/**</sonar.inclusions>
+    		</properties>
 
 	<build>
 		<plugins>
@@ -125,7 +127,28 @@
 			<version>${mule.version}</version>
 			<scope>test</scope>
 		</dependency>
-	</dependencies>
+		<dependency>
+			<groupId>org.sonarsource.scanner.maven</groupId>
+			<artifactId>sonar-maven-plugin</artifactId>
+			<version>3.2</version>
+		</dependency>
+			</dependencies>
+	<profiles>
+		<profile>
+		<id>sonar</id>
+		<activation>
+		<activeByDefault>true</activeByDefault>
+		</activation>
+		<properties>
+<!-- Optional URL to server. Default value is http://localhost:9000 -->
+			<sonar.host.url>
+<!--  http://192.168.2.174:9000 -->
+			http://localhost:9000
+			</sonar.host.url>
+		</properties>
+		</profile>
+	</profiles>
+	
 
 	<repositories>
           <repository>
